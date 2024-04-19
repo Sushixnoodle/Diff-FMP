@@ -10,6 +10,10 @@ public class InventoryManager : MonoBehaviour
 
     public Transform ItemContent;
     public GameObject InventoryItem;
+
+    public Toggle EnableRemove;
+
+    public InventoryItemController[] Inventory;
     public void Awake()
     {
         Instance = this;
@@ -27,14 +31,21 @@ public class InventoryManager : MonoBehaviour
 
     public void ListItems()
     {
+        // The 3 lines underneath will make sure there are no duplicates
+        foreach (Transform item in ItemContent)
+        {
+            Destroy(item.gameObject);
+        }
+        
+        
         foreach (var item in Items)
         {
            
             
             
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("itemName").GetComponent<TMPro.TextMeshProUGUI>();
-            var itemIcon = obj.transform.Find("Icon").GetComponent<Image>();
+            var itemName = obj.transform.Find("ItemName").GetComponent<TMPro.TextMeshProUGUI>();
+            var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
@@ -42,4 +53,23 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+
+    public void EnableItemsRemove()
+    {
+        if(EnableRemove.isOn)
+        {
+            foreach (Transform item in ItemContent)
+            {
+                item.Find("RemoveButton").gameObject.SetActive(true);
+            }
+        }else
+        {
+            foreach (Transform item in ItemContent)
+            {
+                item.Find("RemoveButton").gameObject.SetActive(false);
+            }
+        }
+    }
+
+    
 }
