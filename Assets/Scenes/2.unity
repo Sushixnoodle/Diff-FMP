@@ -3282,6 +3282,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 508150012}
     m_Modifications:
+    - target: {fileID: 83201588753938720, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_text
+      value: 'Name
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 225603287570717611, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 836475543475285569, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4496,7 +4506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4979753912959140991, guid: c1e79908a04053b4bbad4fb239854a01, type: 3}
       propertyPath: m_Name
-      value: Sphere (1)
+      value: GreenApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4516,7 +4526,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4515783134643109150, guid: aac8b6499fed8674f89ffbd5c649be51, type: 3}
       propertyPath: m_Name
-      value: Sphere
+      value: RedApple
       objectReference: {fileID: 0}
     - target: {fileID: 9018098010479775541, guid: aac8b6499fed8674f89ffbd5c649be51, type: 3}
       propertyPath: m_RootOrder
