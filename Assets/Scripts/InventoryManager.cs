@@ -39,7 +39,7 @@ public class InventoryManager : MonoBehaviour
         
         
         foreach (var item in Items)
-        {
+        {  
            
             
             
@@ -51,6 +51,8 @@ public class InventoryManager : MonoBehaviour
             itemIcon.sprite = item.icon;
 
         }
+
+    //    SetInventoryItems();
     }
 
 
@@ -71,5 +73,14 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    
+    /*  public void SetInventoryItems()
+      {
+          InventoryItems = ItemContent.GetComponentsInChildren<InventoryItemController>();
+
+          for (int i = 0; i < Items.Count; i++)
+          {
+              InventoryItems[1].AddItem(Items);
+          }
+     } */
+
 }
