@@ -2977,7 +2977,7 @@ MonoBehaviour:
   ItemContent: {fileID: 508150012}
   InventoryItem: {fileID: 5835974967148409311, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
   EnableRemove: {fileID: 1616431941}
-  Inventory: []
+  InventoryItems: []
 --- !u!4 &1307415697
 Transform:
   m_ObjectHideFlags: 0
@@ -3631,6 +3631,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 780187282000489324, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 780187282000489324, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 780187282000489324, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1788618201}
+    - target: {fileID: 780187282000489324, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 780187282000489324, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RemoveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 780187282000489324, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryItemController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 780187282000489324, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 836475543475285569, guid: a0e98d3b682325847a50efa4cc5c9baa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3763,6 +3791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f32d6069a4ecfd449304c3e93cb9bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RemoveButton: {fileID: 0}
 --- !u!1 &1818872592
 GameObject:
   m_ObjectHideFlags: 0

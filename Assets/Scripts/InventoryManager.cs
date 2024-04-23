@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
 
     public Toggle EnableRemove;
 
-    public InventoryItemController[] Inventory;
+    public InventoryItemController[] InventoryItems;
     public void Awake()
     {
         Instance = this;
@@ -46,25 +46,29 @@ public class InventoryManager : MonoBehaviour
             GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("ItemName").GetComponent<TMPro.TextMeshProUGUI>();
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+            var removeButton = obj.transform.Find("RemoveButton").GetComponent<Button>();
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
 
+            if (EnableRemove.isOn)
+                removeButton.gameObject.SetActive(true);
+
         }
 
-    //    SetInventoryItems();
+        SetInventoryItems();
     }
 
 
     public void EnableItemsRemove()
     {
-        if(EnableRemove.isOn)
+        if (EnableRemove.isOn)
         {
             foreach (Transform item in ItemContent)
             {
                 item.Find("RemoveButton").gameObject.SetActive(true);
             }
-        }else
+        } else
         {
             foreach (Transform item in ItemContent)
             {
@@ -73,14 +77,14 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    /*  public void SetInventoryItems()
-      {
-          InventoryItems = ItemContent.GetComponentsInChildren<InventoryItemController>();
+    public void SetInventoryItems()
+    {
+        InventoryItems = ItemContent.GetComponentsInChildren<InventoryItemController>();
 
-          for (int i = 0; i < Items.Count; i++)
-          {
-              InventoryItems[1].AddItem(Items);
-          }
-     } */
+        for (int i = 0; i < Items.Count; i++)
+        {
+            InventoryItems[i].AddItem(Items[i]);
+        }
+    }
 
 }
