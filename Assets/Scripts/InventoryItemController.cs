@@ -21,4 +21,16 @@ public class InventoryItemController : MonoBehaviour
     {
         item = newItem;
     }
+
+/*    public void UseItem()
+    {
+        switch (item.itemType)
+        {
+            case Item.ItemType.RedApple:
+                Player.Instance.IncreasePoints(item.value);
+            case Item.ItemType.GreenApple:
+                break;
+
+        }
+    } */
 }

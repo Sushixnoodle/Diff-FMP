@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Item/Create New Item")]
 public class Item : ScriptableObject
@@ -7,5 +8,14 @@ public class Item : ScriptableObject
     public string itemName;
     public int value;
     public Sprite icon;
+ /*   public ItemType itemType;
 
+    public enum ItemType
+    {
+        RedApple,
+        GreenApple
+
+    } */
+
+   
 }
