@@ -12,9 +12,12 @@ public class ItemPickup : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnMouseDown()
+    void Update()
     {
-        Pickup();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Pickup();
+        }
     }
 
 }
