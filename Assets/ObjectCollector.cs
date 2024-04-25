@@ -8,6 +8,13 @@ public class ObjectCollector : MonoBehaviour
 
     public string nextSceneName; // Name of the next scene to load
 
+
+    [SerializeField]
+    [Min(1)]
+    private float hitRange = 3;
+
+    private RaycastHit hit;
+
     // This method is called when an object is collected
 
     public int CollectedObjects

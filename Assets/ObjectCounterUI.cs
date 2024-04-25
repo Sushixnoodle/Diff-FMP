@@ -21,6 +21,6 @@ public class ObjectCounterUI : MonoBehaviour
     private void UpdateText()
     {
         // Update the text to display the number of collected objects
-        textComponent.text = "Objects Collected: " + objectCollector.CollectedObjects.ToString();
+      //  textComponent.text = "Objects Collected: " + objectCollector.CollectedObjects.ToString();
     }
 }
