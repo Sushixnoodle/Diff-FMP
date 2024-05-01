@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/4.unity
     guid: 8a621371d4d9bf04585d3df7356398e8
   - enabled: 1
+    path: Assets/Scenes/storageRoom.unity
+    guid: e7a5395f48f8449419385eaa3e4f1e3a
+  - enabled: 1
     path: Assets/Scenes/GameOver1.unity
     guid: f397d5b0a4838ef42bc17acf71a8496d
   m_configObjects:
