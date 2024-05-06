@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
+    public Animator animator;
+
     public Queue<string> sentences;
     public Queue<AudioClip> audioClips; // Queue for audio clips
 
@@ -22,6 +24,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        animator.SetBool("IsOpen", true);
+        
         nameText.text = dialogue.name; 
 
         sentences.Clear();
@@ -49,7 +53,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        StartCoroutine(TypeSentence(sentence));
+
 
         if (audioClips.Count > 0) // Check if there are any audio clips left
         {
@@ -58,8 +63,19 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+
+    IEnumerator TypeSentence (string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
+    }
+
     void EndDialogue()
     {
-        Debug.Log("End of conversation.");
+        animator.SetBool("IsOpen", false);
     }
 }
