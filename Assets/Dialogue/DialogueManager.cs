@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
 
     public AudioSource audioSource; // Reference to the AudioSource component
 
+    private AudioClip currentAudioClip; // Track the currently playing audio clip
+
     void Awake()
     {
         sentences = new Queue<string>();
@@ -25,8 +27,8 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-        
-        nameText.text = dialogue.name; 
+
+        nameText.text = dialogue.name;
 
         sentences.Clear();
         audioClips.Clear(); // Clear the audio clip queue
@@ -52,19 +54,25 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        // Stop the currently playing audio clip
+        if (currentAudioClip != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
         string sentence = sentences.Dequeue();
         StartCoroutine(TypeSentence(sentence));
 
 
         if (audioClips.Count > 0) // Check if there are any audio clips left
         {
-            AudioClip clip = audioClips.Dequeue(); // Dequeue the next audio clip
-            audioSource.PlayOneShot(clip); // Play the audio clip
+            currentAudioClip = audioClips.Dequeue(); // Dequeue the next audio clip
+            audioSource.PlayOneShot(currentAudioClip); // Play the audio clip
         }
     }
 
 
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
