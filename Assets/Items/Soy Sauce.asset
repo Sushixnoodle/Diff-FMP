@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   itemName: Soy sauce
-  value: 0
+  value: 20
   icon: {fileID: 0}
