@@ -285,18 +285,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261109059}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4161992, y: 1.4161992, z: 1.4161992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1743477887}
-  m_Father: {fileID: 944697646}
+  m_Father: {fileID: 588346260}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 69}
+  m_AnchoredPosition: {x: 0, y: 57.90144}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261109061
@@ -806,6 +806,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 261360504}
+  - {fileID: 261109060}
   m_Father: {fileID: 944697646}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1169,7 +1170,6 @@ RectTransform:
   - {fileID: 1378407108}
   - {fileID: 588346260}
   - {fileID: 869799999}
-  - {fileID: 261109060}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1255,8 +1255,10 @@ MonoBehaviour:
     day 3 - Hashim
 
 
-    All the taxi scenes are based on a real person in the Philippines
-    named Denver Mishima
+    Background music - Dipa Ghosh
+
+    All the taxi scenes are
+    based on a real person in the Philippines named Denver Mishima
 
 
 
