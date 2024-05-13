@@ -7,6 +7,7 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
+    public TextMeshProUGUI nameText2; // Add another TextMeshProUGUI field
     public TextMeshProUGUI dialogueText;
 
     public Animator animator;
@@ -17,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     public AudioSource audioSource; // Reference to the AudioSource component
 
     private AudioClip currentAudioClip; // Track the currently playing audio clip
+    private bool isNameText1Active = true; // Track which name text is currently active
 
     void Awake()
     {
@@ -28,7 +30,9 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", true);
 
-        nameText.text = dialogue.name;
+        // Initially, show nameText and hide nameText2
+        nameText.gameObject.SetActive(isNameText1Active);
+        nameText2.gameObject.SetActive(!isNameText1Active);
 
         sentences.Clear();
         audioClips.Clear(); // Clear the audio clip queue
@@ -38,9 +42,9 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        foreach (AudioClip clip in dialogue.audioClips) // Assuming each sentence corresponds to an audio clip
+        foreach (AudioClip clip in dialogue.audioClips)
         {
-            audioClips.Enqueue(clip); // Enqueue the audio clips
+            audioClips.Enqueue(clip);
         }
 
         DisplayNextSentence();
@@ -63,14 +67,12 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StartCoroutine(TypeSentence(sentence));
 
-
-        if (audioClips.Count > 0) // Check if there are any audio clips left
+        if (audioClips.Count > 0)
         {
-            currentAudioClip = audioClips.Dequeue(); // Dequeue the next audio clip
-            audioSource.PlayOneShot(currentAudioClip); // Play the audio clip
+            currentAudioClip = audioClips.Dequeue();
+            audioSource.PlayOneShot(currentAudioClip);
         }
     }
-
 
     IEnumerator TypeSentence(string sentence)
     {
@@ -85,5 +87,12 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+    }
+
+    public void ToggleNameText()
+    {
+        isNameText1Active = !isNameText1Active;
+        nameText.gameObject.SetActive(isNameText1Active);
+        nameText2.gameObject.SetActive(!isNameText1Active);
     }
 }
