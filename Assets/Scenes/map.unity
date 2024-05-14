@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14184535, g: 0.14977998, b: 0.16430643, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1575,7 +1575,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b11a169a9bcb0a47beafe9fb796be9d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1714244039}
   m_SourcePrefab: {fileID: 100100000, guid: 1b11a169a9bcb0a47beafe9fb796be9d, type: 3}
 --- !u!1 &1044282331
 GameObject:
@@ -1607,6 +1610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 2069131533}
+  nameText2: {fileID: 0}
   dialogueText: {fileID: 770937226}
   animator: {fileID: 190907316}
   audioSource: {fileID: 1371098114}
@@ -1991,20 +1995,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f97d3f428ac144194637217803e3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Passenger
+  name1: 
+  name2: 
   sentences:
   - '...
 
 
     You
 
-    Where to?'
+    Hello?'
   - '...
 
 
     You
 
-    Hello?'
+    Where to?'
   - "Oh sorry I\u2019m a bit tired, can you take me to\u2026\n\nYou\nWhat\u2019s
     wrong? whats gotten you this tired?\r\n"
   - "...\n\nYou\nIt\u2019s okay you can tell me, what's said in this jeepney stays
@@ -2026,16 +2031,16 @@ MonoBehaviour:
     oh yeah where am I dropping you again haha\r\n"
   - "Here, I\u2019ll give you the directions, turn right and then\u2026"
   audioClips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 8300000, guid: fd612d440a45e4e4d99ce0e9bc0a99e7, type: 3}
-  - {fileID: 0}
-  - {fileID: 8300000, guid: 8de7fcaffae26364e97184881f7da122, type: 3}
+  - {fileID: 8300000, guid: 7f60b5e032810bc4caf5653f4a28f89c, type: 3}
+  - {fileID: 8300000, guid: d56d91d0210ff774081ef782e8f48281, type: 3}
+  - {fileID: 8300000, guid: 55e3efacea2c2bd41ab844da2d710115, type: 3}
+  - {fileID: 8300000, guid: be50ed6de15a7924a8ec6bae46557d52, type: 3}
+  - {fileID: 8300000, guid: 5bb0abe578dce3b42b0f493de9a0176f, type: 3}
   - {fileID: 8300000, guid: 5084fae9b8444944991b9c37e3cf78e2, type: 3}
-  - {fileID: 8300000, guid: 8a91014dacdd8fa4f8846324c5d93368, type: 3}
-  - {fileID: 8300000, guid: dd9fd4d70e1b85c449924315ec361bc1, type: 3}
-  - {fileID: 8300000, guid: 1c01bd8ddb23ada489845fe41830d9bf, type: 3}
-  - {fileID: 8300000, guid: 7f70573e303e35d4f8b815339fb46514, type: 3}
+  - {fileID: 8300000, guid: c51ae7c5faffdbc4aa11aa8c66ebc795, type: 3}
+  - {fileID: 8300000, guid: b11d3e54439398047b7cda9cb3e8ec06, type: 3}
+  - {fileID: 8300000, guid: b80cd5ece9755ae4fb605397b3d267f8, type: 3}
+  - {fileID: 8300000, guid: 3166876f90435b84b8d82eee19d57b44, type: 3}
   - {fileID: 8300000, guid: 21e266fa73b001a4a80022a71b14ef4f, type: 3}
 --- !u!114 &1371351818
 MonoBehaviour:
@@ -2543,6 +2548,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673687273}
   m_CullTransparentMesh: 1
+--- !u!1 &1714244038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b11a169a9bcb0a47beafe9fb796be9d, type: 3}
+  m_PrefabInstance: {fileID: 869805144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1714244039
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714244038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 680143b15dfd9074b854fff1154291d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1947487417
 GameObject:
   m_ObjectHideFlags: 0
