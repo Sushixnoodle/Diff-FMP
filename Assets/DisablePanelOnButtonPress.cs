@@ -12,6 +12,8 @@ public class DisablePanelOnButtonPress : MonoBehaviour
         {
             // Disable the panel
             panelToDisable.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         else
         {

@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         pauseMenu.SetActive(false);
     }
 
@@ -19,29 +21,30 @@ public class PauseMenu : MonoBehaviour
     {
        if(Input.GetKeyUp(KeyCode.Escape))
         {
-            if(isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
+            pause_system();
         }
 
     }
 
-    public void PauseGame()
+    public void pause_system()
     {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
+        if (isPaused == true)
+        {
+            pauseMenu.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
+            isPaused = false;
+        }
+        else
+        {
+            isPaused = true;
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
-    public void ResumeGame()
-    {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
-    }
+
 }
