@@ -350,7 +350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -232}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 45.6765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &114262714
@@ -2422,11 +2422,11 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 7d61eb927a3b4754eab2109f632c54b3, type: 3}
   - {fileID: 8300000, guid: a3a1d8c8075f6e44b99ef0abac28af7e, type: 3}
-  - {fileID: 8300000, guid: c15e724712396cf4e9e17f7e0e83459c, type: 3}
+  - {fileID: 8300000, guid: 7b97fde8888cbe04dad0e6fcaf52f04c, type: 3}
   - {fileID: 8300000, guid: cb81ae7fccc492040afcac00d7046679, type: 3}
   - {fileID: 8300000, guid: 015d95d59bc6adc4d8bfc39d589b351d, type: 3}
   - {fileID: 8300000, guid: 258695464f522e74994a70e79cd2d609, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8814e33d826b65c4885a14fe256e4d1d, type: 3}
   - {fileID: 8300000, guid: 7e4401a5624cc734caa976c56388788c, type: 3}
   - {fileID: 8300000, guid: c98a20c4c875b1d43991aa771949ee47, type: 3}
   - {fileID: 8300000, guid: eb367ce0c0e879447abc8757928d1399, type: 3}
@@ -2659,7 +2659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -201}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.000030517578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1466712698
