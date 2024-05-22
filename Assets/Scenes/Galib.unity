@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11921305, g: 0.11921305, b: 0.11921305, a: 1}
+  m_IndirectSpecularColor: {r: 0.119156666, g: 0.119156666, b: 0.119156666, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc00bb5414ce48d4593783bb7995178a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: End
+  nextSceneName: Taxi4
 --- !u!114 &658303952
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Galib.unity
     guid: ff478696dd20b9848868c9c4e3247cad
+  - enabled: 1
+    path: Assets/Scenes/Taxi4.unity
+    guid: 128cbb1ffadc21143a09731470877784
   - enabled: 0
     path: Assets/Scenes/4.unity
     guid: 8a621371d4d9bf04585d3df7356398e8
